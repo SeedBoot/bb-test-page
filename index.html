@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+  <title>Blubolt Test</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="export/style.css">
+</head>
+<body>
+
+  <header>
+    <!-- <div class="title"> -->
+      <h1><img src="img/logo.png" alt="Logo for Code Test" /></h1>
+    <!-- </div> -->
+    <nav>
+      <button id="menu">Menu</button>
+      <ul class="menu-list">
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Clients</a></li>
+        <li><a href="#">Awards</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Slideshow -->
+    <section class="carousel">
+      <div class="cell"><img src="https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8a11b1845e152d06c429fe32e5a53adc&auto=format&fit=crop&w=1050&q=80" alt=""></div>
+      <div class="cell"><img src="https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5257b32f41a8a970f1b644c88174cee5&auto=format&fit=crop&w=1052&q=80" alt=""></div>
+      <div class="cell"><img src="https://images.unsplash.com/photo-1485736982040-28ae1d52881d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5d770a8255d450eb36829d278e2b7f7&auto=format&fit=crop&w=1050&q=60" alt=""></div>
+      <div class="cell"><img src="https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8a11b1845e152d06c429fe32e5a53adc&auto=format&fit=crop&w=1050&q=80" alt=""></div>
+      <div class="cell"><img src="https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5257b32f41a8a970f1b644c88174cee5&auto=format&fit=crop&w=1052&q=80" alt=""></div>
+      <div class="cell"><img src="https://images.unsplash.com/photo-1485736982040-28ae1d52881d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5d770a8255d450eb36829d278e2b7f7&auto=format&fit=crop&w=1050&q=60" alt=""></div>
+    </section>
+
+
+    <!-- accordion -->
+    <section class="accordion-container">
+      <div class="acc-box">
+        <button class="accordion">Lorem ipsum?</button>
+        <p class="panel">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+      </div>
+
+      <div class="acc-box">
+        <button class="accordion">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</button>
+        <p class="panel">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+      </div>
+
+      <div class="acc-box">
+        <button class="accordion">Morbi blandit suscipit ante?</button>
+        <p class="panel">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse. Duis condimentum arcu nulla. Curabitur eget semper risus</p>
+      </div>
+    </section>
+
+    <!-- form -->
+    <section class="form-container">
+      <form action="#" method="post">
+        <div class="form-area">
+          <label for="name-input">Your name</label>
+          <input type="text" name="Your name" id="name-input">
+        </div>
+
+        <div class="form-area">
+          <label for="email-input">Your e-mail</label>
+          <input type="email" name="Your email" id="email-input">
+        </div>
+
+        <div class="form-area">
+          <label for="service-input">Service</label>
+          <input type="text" name="Service required" id="service-input">
+        </div>
+
+        <div class="form-area">
+          <label for="phone-input">Your phone number</label>
+          <input type="tel" name="Your phone number" id="phone-input">
+        </div>
+
+        <div class="form-area wide">
+          <label for="message-input">Message / Max 200 characters</label>
+          <!-- <input type="text" name="Message" id="message-input"> -->
+          <textarea id="message-input" rows="5" maxlength="200"></textarea>
+        </div>
+
+        <input class="form-btn" type="submit" value="Send mail">
+      </form>
+    </section>
+
+    <!-- Two boxes -->
+    <section class="extra-bits">
+      <div class="left">
+        <img src="/img/mountain-img-1.jpg" alt="">
+        <div class="content">
+          <p><span>Good</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <button><i class="fas fa-play"></i></a></button>
+        </div>
+      </div>
+      <div class="right">
+        <img src="/img/mountain-img-2.jpg" alt="">
+        <div class="content">
+          <p><span>Morning</span>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+          <button><i class="fas fa-book-open"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product selection -->
+    <section class="shop">
+      <form id="select-item" action="#">
+        <div class="left">
+          <div class="color-show"></div>
+          <img src="img/boot.jpg" alt="">
+          <div class="color-select">
+            <p class="color-show">Available Colours</p>
+            <div>
+              <button class="aqua" data-color="Aqua"></Button>
+              <button class="yellow" data-color="Yellow"></button>
+              <button class="red" data-color="Red"></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="container">
+            <h3>Product Name</h3>
+            <p>brand: <span>name</span></p>
+            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+            <p>$249 <span>Delivery</span></p>
+              <input type="number" name="" id="product-count">
+              <input type="submit" value="Add to cart">
+          </div>
+        </div>
+      </form>
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>
+        <img src="img/logo.png" alt="Logo for Code Test" />
+      </div>
+      <div>
+        <p>123 Street, <span>Anytown, USA 12345</span></p>
+        <p>hello@website.com</p>
+      </div>
+        
+      <div class="extras">
+        <div>
+          <a href=""><i class="fas fa-user-friends"></i></a>
+          <a href=""><i class="fas fa-cloud"></i></a>
+          <a href=""><i class="fas fa-camera"></i></a>
+        </div>
+        <p>&copy; Lorem Ipsum 2018</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="dist/bundle.js"></script>
+</body>
+</html>
