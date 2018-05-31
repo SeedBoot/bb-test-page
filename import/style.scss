@@ -206,9 +206,14 @@ main {
 
   form {
     width: 70%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    *:invalid {
+      box-shadow: 0 0 5px 5px rgba(255,0,0,0.5);
+    }
 
     .form-area {
       width: 45%;
@@ -325,9 +330,25 @@ main {
   .left {
     position: relative;
 
+    div.color-show {
+      width: 50%;
+      position: absolute;
+      background: #00d3ca;
+      // display: block;
+      z-index: -1;
+      padding-bottom: 65%;
+      top: 1%;
+      left: 5%;
+    }
+
     img {
       margin: 0 auto;
       display: block;
+      // align-self: end;
+      width: 50%;
+      position: absolute;
+      top: 7%;
+      left: 12%;
     }
 
     .color-select {
@@ -351,6 +372,10 @@ main {
         border: none;
         margin-bottom: 5px;
         display: block;
+
+        &:focus {
+          border: 2px solid #777;
+        }
       }
 
       .aqua {
@@ -374,13 +399,57 @@ main {
 
     .container {
       width: 80%;
+
+      h3 {
+        font-size: 24px;
+      }
+
+      p:first-of-type {
+        text-transform: uppercase;
+
+        span {
+          font-weight: 600;
+          text-decoration: underline;
+        }
+      }
+
+      p:last-of-type {
+
+        span {
+          text-decoration: underline;
+        }
+      }
     }
 
-    input {
-      padding: 5px;
+    // input {
+    //   padding: 5px;
+    // }
+
+    input[type="number"],
+    #reduce,
+    #increase {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #999;
+      background: none;
+    }
+
+    input[type="number"] {
+      height: 36px;
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      appearance: textfield;
+      text-align: center;
+      // padding: none;
+    }
+
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none;
     }
 
     input[type="submit"] {
+      height: 40px;
       border: none;
       background: #f74c62;
       color: #fff;
@@ -400,6 +469,7 @@ footer {
     padding: 20px 0 0;
     display: flex;
     justify-content: space-around;
+    align-items: flex-end;
   }
 
   div p span {
@@ -451,6 +521,12 @@ footer {
   }
 }
 
+@media all and (min-width: 868px) {
+  #select-item {
+    min-height: 500px;
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 800px) {
   .extra-bits p {
     font-size: 14px;
@@ -468,6 +544,12 @@ footer {
     width: 80%;
     margin: 0 auto;
     flex-direction: column;
+  }
+}
+
+@media all and (max-width:638px) {
+  .shop .left div.color-show {
+    top: 20%;
   }
 }
 

@@ -40,8 +40,7 @@ for (let i = 0; i < acc.length; i++) {
   });
 }
 
-const selectItem = document.getElementById("select-item");
-
+// vars for comolr select buttons 
 const btnAqua = document.getElementsByClassName("aqua")[0];
 const btnYellow = document.getElementsByClassName("yellow")[0];
 const btnRed = document.getElementsByClassName("red")[0];
@@ -53,6 +52,7 @@ btnAqua.addEventListener("click", function(e) {
   e.preventDefault();
   colorChoice = this.dataset.color;
   console.log(colorChoice);
+  console.log(e);
 });
 
 btnYellow.addEventListener("click", function(e) {
@@ -67,9 +67,38 @@ btnRed.addEventListener("click", function(e) {
   console.log(colorChoice);
 });
 
+// vars for buttons and number input
+const reduce = document.getElementById("reduce");
+const increase = document.getElementById("increase");
 const prodCount = document.getElementById("product-count");
 
-selectItem.onsubmit = () => {
+// Set initial input value
+// Assign it to input onload below
+let quantityValue = 1;
+
+// listeners for product count
+reduce.addEventListener("click", (e) => {
+  e.preventDefault();
+    quantityValue--;
+    prodCount.value = quantityValue;
+});
+increase.addEventListener("click", (e) => {
+  e.preventDefault();
+    quantityValue++;
+    prodCount.value = quantityValue;
+});
+
+const selectItem = document.getElementById("select-item");
+
+selectItem.onsubmit = (e) => {
+  e.preventDefault();
   let count = prodCount.value;
   window.alert(`Congratulations!! You've selected ${count} of ${colorChoice}`);
+
+  // return false;
 }
+
+window.onload = () => {
+  btnAqua.classList.add("active");
+  prodCount.value = quantityValue;
+};
